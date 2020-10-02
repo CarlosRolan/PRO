@@ -140,9 +140,9 @@ public class Main {
 					System.out.println("ERROR: Operador Inválido");
 			}
 		}
-				scan.close();
-
+		scan.close();
 		*/
+		
 		
 		//Ejercicio 6
 		/*
@@ -156,11 +156,11 @@ public class Main {
 		}
 		System.out.println("El promedio de los 20 números introducidos es: " + n/20);
 				scan.close();
-
-		*/
+*/
+		
 		
 		//Ejercicio 7
-		/*
+		
 		Scanner scan = new Scanner(System.in);
 		int n, aux = 1;
 		System.out.println("Introduzca un número: \n");
@@ -169,9 +169,9 @@ public class Main {
 			aux = aux * i;
 		}
 		System.out.println("El factorial de " + n + " es: " + aux);
-				scan.close();
+		scan.close();
 
-		*/
+		
 		
 		//Ejercicio 8
 		/*
