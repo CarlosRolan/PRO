@@ -160,7 +160,7 @@ public class Main {
 		
 		
 		//Ejercicio 7
-		
+		/*
 		Scanner scan = new Scanner(System.in);
 		int n, aux = 1;
 		System.out.println("Introduzca un número: \n");
@@ -171,7 +171,7 @@ public class Main {
 		System.out.println("El factorial de " + n + " es: " + aux);
 		scan.close();
 
-		
+		*/
 		
 		//Ejercicio 8
 		/*
