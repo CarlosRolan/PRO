@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		//Ejercicio1
 		/*
 		float far, cel;
@@ -214,7 +215,7 @@ public class Main {
 		} else {
 			System.out.println("El texto no es tuiteable. \n");
 		}
-				scan.close();
+		scan.close();
 
 		*/
 		
@@ -231,9 +232,9 @@ public class Main {
 			h = h - (d*24);
 		}
 		System.out.println(d + " día(s) " + h + " hora(s)" + min + " minuto(s). \n");
-				scan.close();
-
+		scan.close();
 		*/
+		
 		
 		//Ejercicio 12
 		/*
@@ -297,9 +298,52 @@ public class Main {
 		System.out.println("El resultado de " + x + " elevado a " + y + " es: " + res);
 		scan.close();
 		*/
+		//Ejercicio 14 con operador *=
+		
+		/*
+		Scanner scan = new Scanner(System.in);
+		int x, y, res = 1;
+		do {
+			System.out.println("Introduzca el primer número: \n");
+			x = scan.nextInt();
+			System.out.println("Introduzca el segundo número: \n");
+			y = scan.nextInt();
+			if(x > 0 && y > 0){
+				for(int i = 1; i <= y; i++){
+					res *= x;
+				}
+				System.out.println("El resultado de " + x + " elevado a " + y + " es: "+ res);
+			} else {
+				System.out.println("Los numeros deben ser positivos");
+			}
+		} while(x <= 0 || y <=0);
+		scan.close();
+
+		*/
 		
 		//Ejercicio 15
+		
 		/*
+		Scanner scan = new Scanner(System.in);
+		float min, max, var;
+		System.out.println("Introduce un valor.");
+		var = scan.nextFloat();
+		min = max = var;
+		for(int i = 1; i < 20; i++){
+			System.out.println("Introduce un valor.");
+			var = scan.nextFloat();
+			if( var > max){
+				max = var;
+			} else if( var < min ){
+				min = var;
+			}
+		}
+		System.out.println("El valor máximo es: " + max + " y el mínimo es: " + min);
+		scan.close();
+		*/
+		
+		/*
+		
 		Scanner scan = new Scanner(System.in);
 		float x, max, min;
 		int i = 1;
@@ -336,31 +380,58 @@ public class Main {
 			System.out.println(x + " es un número primo.\n");
 		}
 		scan.close();
+		
 		*/
 		
-		//Ejercicio 17
+		
+		//Ejercicio 17		
+		
 		/*
 		Scanner scan = new Scanner(System.in);
-		int x = -1, aux = 0;
-		while( x != 0) {
-			System.out.println("Introduzca un entero positivo mayor que el anterior: \nPulse 0 para salir.");
-			aux = scan.nextInt();
-			if(aux > x) {
-				x = aux;
-				System.out.println("Nuevo mayor entero: " + x);
-			} else {
-				if(aux == 0){
-					x = aux;
-					System.out.println("Fin del programa");
+		int x = -1, max = 0;
+		do {
+			do {
+				System.out.println("Escribe un número positivo: \nPulse 0 para salir.");
+				x = scan.nextInt();
+			} while(x < 0);
+			
+			if(x > 0){
+				if(x > max) {
+					System.out.println(x + " es mayor que el anterior");
+					max = x;
 				} else {
-					System.out.println("Ese entero no es mayor a " + x);
+					max = x;
 				}
 			}
-		}
+		} while( x!= 0);
+		System.out.println("Bye!");
 		scan.close();
 		*/
 		
 		//Ejercicio 18
+		/*
+		Scanner scan = new Scanner(System.in);
+		int sumPar = 0, x = 0, numPar = 0, sumImp = 0, numImp = 0;
+		for(int i = 0; i < 10; i++){
+			System.out.println("Introduzca un número entero: ");
+			x = scan.nextInt();
+			if(x%2 == 0){
+				sumPar += x; //sumPar = sumPar + x; 
+				numPar++;
+			} else {
+				sumImp += x;
+				numImp++;
+			}
+		}
+		float media = sumImp/numImp;
+		System.out.println("El sumatorio de los pares es: " + sumPar);
+		System.out.println("El total de pares es: " + numPar);
+		System.out.println("La media de los impares es: " + media);
+		scan.close();
+		*/
+		
+		
+		
 		/*
 		Scanner scan = new Scanner(System.in);
 		int numPar = 0, sumPar = 0, aux, sumImpar = 0;
@@ -384,8 +455,8 @@ public class Main {
 		*/
 		
 		//Ejercicio 19
-		/*
 		
+		/*
 		  int valor [] = new int[10];
 		  int sumatoria = 0;
 		  float media = 0;
@@ -397,13 +468,13 @@ public class Main {
 		  for (int i = 0; i < 10; i++ ){
 		   System.out.print("Ingrese el valor " + (i + 1) + ":");
 		   valor[i] = scan.nextInt();
-		   sumatoria = sumatoria + valor[i];
+		   sumatoria += valor[i];
 		  }
 		  scan.close();
 		  media = sumatoria / 10; 
 		  for(int i = 0 ; i < 10; i++){
 		   double rango;
-		   rango = Math.pow(valor[i] - media, 2f);
+		   rango = Math.pow(valor[i] - media, 2f); // (valor[i] - media)^2
 		   varianza = varianza + rango;
 		  }
 		  varianza = varianza / 10f;
